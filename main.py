@@ -22,7 +22,7 @@ def clear_console():
 
 # Create a function that returns a random item from 'data'
 def get_random_item():
-    return data[random.randint(0, len(data) - 1)]
+    return random.choice(data)
 
 # Create a function that compares the number of followers of 2 items (returns True if 'item1' has more followers)
 def has_more_followers(item1, item2):
