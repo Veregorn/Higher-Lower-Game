@@ -24,6 +24,10 @@ def clear_console():
 def get_random_item():
     return random.choice(data)
 
+# Create a function that format data to be printed
+def format_data(item):
+    return f"{item['name']}, a {item['description']}, from {item['country']}"
+
 # Create a function that compares the number of followers of 2 items (returns True if 'item1' has more followers)
 def has_more_followers(item1, item2):
     return item1['follower_count'] > item2['follower_count']
@@ -50,7 +54,7 @@ while True:
         itemA = get_random_item()
 
     # Print item A info
-    print(f"Compare A: {itemA['name']}, a {itemA['description']}, from {itemA['country']}")
+    print(f"Compare A: {format_data(itemA)}")
 
     # Print the VS logo
     print(vs)
@@ -59,7 +63,7 @@ while True:
     itemB = get_random_item()
 
     # Print item B info
-    print(f"Against B: {itemB['name']}, a {itemB['description']}, from {itemB['country']}")
+    print(f"Against B: {format_data(itemB)}")
 
     # Ask user for a guess
     while player_guess != 'A' and player_guess != 'B':
